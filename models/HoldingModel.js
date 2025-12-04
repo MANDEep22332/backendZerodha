@@ -1,4 +1,4 @@
-const {modle, model} = require("mongoose");
+const { model} = require("mongoose");
 
 const {HoldingSchema} = require("../Schemas/HolidingSchema");
 
