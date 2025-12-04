@@ -6,4 +6,4 @@ const jwt = require("jsonwebtoken");
   });
 };
 
-export default  { createSecretToken };
+module.exports = { createSecretToken };

@@ -18,7 +18,7 @@ const bodyParser = require("body-parser");
 const authRoute = require("./Routes/AuthRoute");
 const { HoldingModel } = require("./Models/HoldingModel");
 
-const { PositionsModel } = require("./Models/PositionsModel").default;
+const { PositionsModel } = require("./Models/PositionsModel");
 const { OrdersModel } = require("./Models/OrdersModel");
 
 
