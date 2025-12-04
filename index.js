@@ -8,7 +8,7 @@ app.use(express.json());                    // to read JSON body
 app.use(cookieParser());
 
 app.use(cors({
-origin: ["http://localhost:3001", "http://localhost:3000"],// Allow requests from both ports
+origin: ["http://localhost:3001", "https://zerodha-trading-app-509w.onrender.com"],// Allow requests from both ports
 credentials: true// Allows cookies
 }));
 
