@@ -1,5 +1,5 @@
 require("dotenv").config();
-const  {User} = require("../Models/UserModel");
+const  User = require("../Models/UserModel");
 const jwt = require("jsonwebtoken");
 
 module.exports.userVerification = (req, res) => {
