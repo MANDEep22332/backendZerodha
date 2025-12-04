@@ -1,5 +1,5 @@
-import User from "../Models/UserModel.js";
 require("dotenv").config();
+const { User } = require("../Models/UserModel");
 const jwt = require("jsonwebtoken");
 
 module.exports.userVerification = (req, res) => {

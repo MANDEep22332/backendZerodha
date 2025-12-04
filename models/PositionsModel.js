@@ -1,9 +1,9 @@
-import { model } from "mongoose";
+const { model } =  require("mongoose");
 
-import { PositionsSchema } from "../Schemas/PositionsSchema";
+const PositionsSchema =  require("../Schemas/PositionsSchema.js");
 
 
 const PositionsModel = new model("position",PositionsSchema);
 
 
-export default {PositionsModel};
+module.exports = {PositionsModel};
