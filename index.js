@@ -16,10 +16,10 @@ credentials: true// Allows cookies
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const authRoute = require("./Routes/AuthRoute");
-const { HoldingModel } = require("./Models/HoldingModel");
+const { HoldingModel } = require("./models/HoldingModel");
 
-const { PositionsModel } = require("./Models/PositionsModel").default;
-const { OrdersModel } = require("./Models/OrdersModel");
+const { PositionsModel } = require("./models/PositionsModel").default;
+const { OrdersModel } = require("./models/OrdersModel");
 
 
 const PORT =  3002;

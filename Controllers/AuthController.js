@@ -1,4 +1,4 @@
-import  User  from "../Models/UserModel";
+const { User } = require("../models/UserModel");
 import { createSecretToken } from "../util/SecretToken";
 import { compare } from "bcryptjs";
 
