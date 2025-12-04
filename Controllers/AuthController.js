@@ -2,7 +2,7 @@ const { User } = require("../Models/UserModel");
 const { createSecretToken } = require("../util/SecretToken");
 const { compare } = require("bcryptjs");
 
-export async function Signup(req, res, next) {
+module.exports = async function Signup(req, res, next) {
   try {
     const { email, password, username, createdAt } = req.body;
     const existingUser = await User.findOne({ email });
@@ -25,7 +25,7 @@ res.json({ success: true, message: "Success" });
 
 
 
-export async function Login(req, res, next) {
+module.exports =  async function Login(req, res, next) {
   try {
     const { email, password } = req.body;
     if(!email || !password ){
