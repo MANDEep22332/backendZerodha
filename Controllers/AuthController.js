@@ -1,8 +1,8 @@
-const{ User} = require("../Models/UserModel");
-const { createSecretToken } = require("../util/SecretToken");
-const bcrypt = require("bcryptjs");
+import  User  from "../Models/UserModel";
+import { createSecretToken } from "../util/SecretToken";
+import { compare } from "bcryptjs";
 
-module.exports.Signup = async (req, res, next) => {
+export async function Signup(req, res, next) {
   try {
     const { email, password, username, createdAt } = req.body;
     const existingUser = await User.findOne({ email });
@@ -20,12 +20,12 @@ res.json({ success: true, message: "Success" });
   } catch (error) {
     console.error(error);
   }
-};
+}
 
 
 
 
-module.exports.Login = async (req, res, next) => {
+export async function Login(req, res, next) {
   try {
     const { email, password } = req.body;
     if(!email || !password ){
@@ -35,7 +35,7 @@ module.exports.Login = async (req, res, next) => {
     if(!user){
       return res.json({message:'Incorrect password or email' }) 
     }
-    const auth = await bcrypt.compare(password,user.password)
+    const auth = await compare(password,user.password)
     if (!auth) {
       return res.json({message:'Incorrect password or email' }) 
     }
@@ -49,4 +49,4 @@ module.exports.Login = async (req, res, next) => {
   } catch (error) {
     console.error(error);
   }
-};
+}

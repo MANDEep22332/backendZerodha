@@ -1,4 +1,4 @@
-const User = require("../Models/UserModel");
+import User from "../Models/UserModel.js";
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
@@ -20,7 +20,7 @@ module.exports.userVerification = (req, res) => {
 };
 
 module.exports.Logout = (req, res, next) => {
-  removeCookie("token");
-  res.redirect("http://localhost:3000/");
+  res.clearCookie("token");
+  res.redirect("https://zerodha-trading-app-509w.onrender.com/");
 
 }
